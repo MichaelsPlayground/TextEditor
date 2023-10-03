@@ -85,6 +85,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * section for reading data from a text file
+     */
+
+
     ActivityResultLauncher<Intent> fileChooserActivityResultLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             new ActivityResultCallback<ActivityResult>() {
@@ -125,6 +130,9 @@ public class MainActivity extends AppCompatActivity {
         return stringBuilder.toString();
     }
 
+    /**
+     * section for writing data to a text file
+     */
 
     ActivityResultLauncher<Intent> fileSaverActivityResultLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
