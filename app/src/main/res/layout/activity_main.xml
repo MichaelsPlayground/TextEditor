@@ -21,6 +21,7 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <ScrollView
+        android:id="@+id/svScrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -143,6 +144,16 @@
                 android:layout_marginTop="8dp"
                 app:dividerInsetEnd="8dp"
                 app:dividerInsetStart="8dp" />
+
+            <Button
+                android:id="@+id/btnScrollToTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="go to top"
+                app:icon="@drawable/outline_vertical_align_top_24" />
 
         </LinearLayout>
 

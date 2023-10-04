@@ -22,9 +22,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -38,8 +40,9 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
-    private Button openFile, saveFile, copyToClipboard, pasteFromClipboard;
+    private Button openFile, saveFile, copyToClipboard, pasteFromClipboard, scrollToTop;
     private com.google.android.material.textfield.TextInputEditText textData;
+    private ScrollView scrollView;
     private Context contextSave; // used for read a file from uri
     private String DEFAULT_FILENAME = "file01.txt";
 
@@ -56,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
         copyToClipboard = findViewById(R.id.btnCopyToClipboard);
         pasteFromClipboard = findViewById(R.id.btnPasteFromClipboard);
         textData = findViewById(R.id.etTextData);
+        scrollToTop = findViewById(R.id.btnScrollToTop);
+        scrollView = findViewById(R.id.svScrollView);
 
         // hide soft keyboard from showing up on startup
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
@@ -91,6 +96,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Log.d(TAG, "pasteFromClipboard");
                 onPasteFromClipboard();
+            }
+        });
+
+        scrollToTop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d(TAG, "scrollToTop");
+                onScrollToTop();
             }
         });
 
@@ -145,6 +158,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void onScrollToTop() {
+        scrollView.fullScroll(ScrollView.FOCUS_UP);
+        scrollView.smoothScrollTo(0, 0);
+    }
 
     /**
      * section for reading data from a text file
