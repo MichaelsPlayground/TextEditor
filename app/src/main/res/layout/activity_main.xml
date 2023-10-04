@@ -31,17 +31,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:text="Working with images"
-                android:textAlignment="center"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -97,18 +86,6 @@
                     app:icon="@drawable/baseline_content_copy_24" />
 
             </LinearLayout>
-
-            <TextView
-                android:id="@+id/tvWarningFullSave"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:text="Note: saving images in full resolution may take some seconds while the app gets inactive"
-                android:textAlignment="center"
-                android:textColor="#FF0303"
-                android:textSize="16sp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/etTextDataLayout"

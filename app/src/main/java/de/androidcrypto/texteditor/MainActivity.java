@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     private ScrollView scrollView;
     private Context contextSave; // used for read a file from uri
     private String DEFAULT_FILENAME = "file01.txt";
-// color B3B3B3 gray blue: #2196F3
+// color B3B3B3 gray blue: #2196F3, lila DE4BFF
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -159,8 +159,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void onScrollToTop() {
-        scrollView.fullScroll(ScrollView.FOCUS_UP);
-        scrollView.smoothScrollTo(0, 0);
+
+        scrollView.post(new Runnable() {
+            public void run() {
+                scrollView.fullScroll(ScrollView.FOCUS_UP);
+                scrollView.scrollTo(0, 0);
+            }
+        });
     }
 
     /**
