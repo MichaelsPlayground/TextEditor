@@ -1,0 +1,43 @@
+<!-- sample_menu.xml -->
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- https://fonts.google.com/icons?selected=Material+Icons -->
+
+    <item
+        android:id="@+id/action_go_to_top"
+        android:title="go to top"
+        android:icon="@drawable/outline_vertical_align_top_24"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_save_to_file"
+        android:title="save to file"
+        android:icon="@drawable/outline_save_24"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_load_from_file"
+        android:title="load from file"
+        android:icon="@drawable/outline_file_open_24"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_copy_to_clipboard"
+        android:title="copy to clipboard"
+        android:icon="@drawable/outline_content_paste_go_24"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_paste_from_clipboard"
+        android:title="paste from clipboard"
+        android:icon="@drawable/baseline_content_copy_24"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_return_main"
+        android:title="return to Home"
+        app:showAsAction="never"/>
+
+</menu>
