@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     private ScrollView scrollView;
     private Context contextSave; // used for read a file from uri
     private String DEFAULT_FILENAME = "file01.txt";
-
+// color B3B3B3 gray blue: #2196F3
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -330,6 +330,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 onPasteFromClipboard();
+                return false;
+            }
+        });
+
+        MenuItem mScrollToTop = menu.findItem(R.id.action_scroll_to_top);
+        mScrollToTop.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                onScrollToTop();
                 return false;
             }
         });
