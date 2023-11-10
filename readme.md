@@ -12,6 +12,6 @@ This app is a **Text Editor** that has a limited functionality:
 As this app uses the device's internal file picker there is no need to grant any permissions for reading and 
 writing.
 
-On my real device an existing file doe not get overwritten, but a new file is created with (1) at the end.
+On my real device an existing file does not get overwritten, but a new file is created with (1) at the end.
 
-This code is **Public DOmain** - have fun with the app.
+This code is **Public Domain** - have fun with the app.
